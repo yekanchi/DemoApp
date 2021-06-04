@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace TalebiAPI.Domain
@@ -9,15 +10,7 @@ namespace TalebiAPI.Domain
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime BirthTime { get; set; }
         public int Age { get; set; }
-    }
-
-
-    public class SingleResponse<T>
-    {
-        public bool HasError { get; set; }
-        public T Data { get; set; }
-        public string ErrorMessage { get; set; }
-        
     }
 }

@@ -30,5 +30,11 @@ namespace TalebiAPI.Controllers
         {
             return _dataService.GetUsers();
         }
+
+        [HttpDelete("/delete/{id}")]
+        public bool Remove(long id)
+        {
+            return _dataService.Delete(id);
+        }
     }
 }

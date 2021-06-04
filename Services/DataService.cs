@@ -18,9 +18,20 @@ namespace TalebiAPI.Services
             return _employeeRepository.CreateUser(user);
         }
 
+        public User GetUserById(long id)
+        {
+            return _employeeRepository.GetById(id);
+        }
+
         public List<User> GetUsers()
         {
             return _employeeRepository.GetAll();
+        }
+
+        public bool Delete(long id)
+        {
+            var user = _employeeRepository.GetById(id);
+            return _employeeRepository.Remove(user);
         }
     }
 }
