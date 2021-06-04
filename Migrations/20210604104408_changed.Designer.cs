@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TalebiAPI.Domain;
 
 namespace TalebiAPI.Migrations
 {
     [DbContext(typeof(SqLiteDbContext))]
-    partial class SqLiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210604104408_changed")]
+    partial class changed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
