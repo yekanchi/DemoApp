@@ -38,5 +38,13 @@ namespace TalebiAPI.DataAccess
             db.Users.Remove(user);
             return db.SaveChanges() > 0;
         }
+
+        public bool Update(User user)
+        {
+            using var db = new SqLiteDbContext();
+            var userToUpdate = db.Users.FirstOrDefault(u => u.Id == user.Id);
+            userToUpdate = user;
+            return db.SaveChanges() > 0;
+        }
     }
 }

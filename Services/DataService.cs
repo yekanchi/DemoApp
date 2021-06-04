@@ -33,5 +33,10 @@ namespace TalebiAPI.Services
             var user = _employeeRepository.GetById(id);
             return _employeeRepository.Remove(user);
         }
+
+        public bool Update(User user)
+        {
+            return _employeeRepository.Update(user);
+        }
     }
 }

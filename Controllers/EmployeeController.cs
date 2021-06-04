@@ -25,6 +25,13 @@ namespace TalebiAPI.Controllers
             return _dataService.CreateUser(user);
         }
 
+        [HttpPut]
+        public bool Update(User user)
+        {
+            return _dataService.Update(user);
+        }
+
+
         [HttpGet("/all")]
         public List<User> GetAll()
         {
