@@ -17,13 +17,13 @@ namespace TalebiAPI.DataAccess
             return result;
         }
 
-        public User GetById(long id) 
+        public User GetById(long id)
         {
             using var db = new SqLiteDbContext();
-            var user = db.Users.SingleOrDefault(u=> u.Id == id);
+            var user = db.Users.SingleOrDefault(u => u.Id == id);
             return user;
         }
-        
+
         public List<User> GetAll()
         {
             using var db = new SqLiteDbContext();
@@ -43,8 +43,17 @@ namespace TalebiAPI.DataAccess
         {
             using var db = new SqLiteDbContext();
             var userToUpdate = db.Users.FirstOrDefault(u => u.Id == user.Id);
-            userToUpdate = user;
-            return db.SaveChanges() > 0;
+            if (userToUpdate is not null)
+            {
+                userToUpdate.FirstName = user.FirstName;
+                userToUpdate.LastName = user.LastName;
+                userToUpdate.Age = user.Age;
+                userToUpdate.BirthTime = user.BirthTime;
+                return db.SaveChanges() > 0;
+            }
+
+            return false;
+
         }
     }
 }
