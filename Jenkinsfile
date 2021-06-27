@@ -3,7 +3,6 @@ pipeline {
     node {
       label 'test'
     }
-
   }
   stages {
     stage('') {
