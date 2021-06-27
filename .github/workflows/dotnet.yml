@@ -7,6 +7,14 @@ on:
     branches: [ main, dev ]
 
 jobs:
+  printinfo:
+    runs-on: windows-latest
+    steps:
+    - name: powershell script
+    - uses:  Amadevus/pwsh-script@v2.0.1
+      with:
+       # PowerShell script to execute in Actions-hydrated context
+        script: dir
   build:
 
     runs-on: ubuntu-latest
