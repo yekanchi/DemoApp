@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-
-namespace TalebiAPI.Domain
+namespace Bidar.WebAPI.Domain
 {
     public class User
     {

@@ -3,15 +3,17 @@ using System;
 using Bidar.WebAPI.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace TalebiAPI.Migrations
 {
     [DbContext(typeof(SqLiteDbContext))]
-    partial class SqLiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210623135647_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,20 +21,20 @@ namespace TalebiAPI.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity(nameof(User), b =>
+            modelBuilder.Entity("TalebiAPI.Domain.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>(nameof(User.Age))
+                    b.Property<int>("Age")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>(nameof(User.BirthTime))
+                    b.Property<DateTime>("BirthTime")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<string>(emaN)
+                    b.Property<string>("FirstName")
                         .HasColumnType("text");
 
                     b.Property<Guid>("Guid")

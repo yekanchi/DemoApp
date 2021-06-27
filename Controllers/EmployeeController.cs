@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bidar.WebAPI.Domain;
+using Bidar.WebAPI.Services;
 using TalebiAPI.Domain;
-using TalebiAPI.Services;
 
 namespace TalebiAPI.Controllers
 {

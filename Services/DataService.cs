@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
-using TalebiAPI.DataAccess;
+using Bidar.WebAPI.DataAccess;
+using Bidar.WebAPI.Domain;
 using TalebiAPI.Domain;
 
-namespace TalebiAPI.Services
+namespace Bidar.WebAPI.Services
 {
     public class DataService
     {

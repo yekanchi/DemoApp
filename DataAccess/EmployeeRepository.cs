@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Bidar.WebAPI.Domain;
 using TalebiAPI.Domain;
 
-namespace TalebiAPI.DataAccess
+namespace Bidar.WebAPI.DataAccess
 {
     public class EmployeeRepository
     {
