@@ -1,9 +1,13 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'test'
+    }
+  }
   stages {
-    stage('Print Info') {
+    stage('') {
       steps {
-        pwsh 'Dir'
+        sleep 1000
       }
     }
 
