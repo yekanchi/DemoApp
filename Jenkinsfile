@@ -3,11 +3,12 @@ pipeline {
     node {
       label 'test'
     }
+
   }
   stages {
-    stage('') {
+    stage('sleep') {
       steps {
-        sleep 1000
+        sleep 2
       }
     }
 
