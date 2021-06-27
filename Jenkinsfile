@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('force error') {
+      steps {
+        error 'forced fail'
+      }
+    }
+
   }
 }
