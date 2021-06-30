@@ -1,0 +1,54 @@
+.close-btn {
+    width: 30%;
+    margin-left: 10px;
+}
+
+.submit-btn {
+    width: 30%;
+    margin-left: 30px;
+}
+
+.right-align-text {
+    text-align: right;
+}
+
+mat-toolbar {
+    height: 30px;
+    background-color: inherit;
+    font-family: vazir;
+    font-size: 1rem;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+    mat-form-field {
+        width: 190px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    mat-form-field {
+        width: 155px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    mat-form-field {
+        width: 127px;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    mat-form-field {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    td {
+        display: block;
+    }
+    mat-form-field {
+        width: 180px;
+    }
+}

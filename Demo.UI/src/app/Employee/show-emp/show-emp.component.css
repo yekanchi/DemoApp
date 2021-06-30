@@ -1,0 +1,21 @@
+#add-btn {
+    margin-top: 20px;
+}
+
+#add-btn:hover {
+    color: #DC3545;
+    background-color: #fff;
+}
+
+#option {
+    direction: ltr;
+}
+
+mat-header-cell {
+    direction: rtl;
+    padding-right: 0 !important;
+}
+
+mat-cell {
+    direction: rtl;
+}
