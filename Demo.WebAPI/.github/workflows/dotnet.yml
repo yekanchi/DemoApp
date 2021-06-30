@@ -1,0 +1,33 @@
+name: .NET
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  printinfo:
+    runs-on: windows-latest
+    steps:
+    - name: powershell script
+    - uses:  Amadevus/pwsh-script@v2.0.1
+      with:
+       # PowerShell script to execute in Actions-hydrated context
+        script: "dir"
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore SampleAPI.csproj
+    - name: Build
+      run: dotnet build SampleAPI.csproj --no-restore
+    - name: Test
+      run: dotnet test  SampleAPI.csproj --no-build --verbosity normal
